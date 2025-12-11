@@ -1,0 +1,48 @@
+/* Estilos para o card de produto */
+.product-card {
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15) !important;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product-title {
+  color: #53632F;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.product-title:hover {
+  color: #A7672A;
+}
+
+.bestseller-badge {
+  background-color: #A7672A !important;
+  font-size: 0.8rem;
+}
+
+.discount-badge {
+  background-color: #dc3545 !important;
+  font-size: 0.8rem;
+}
+
+.product-button {
+  background-color: #A7672A;
+  border-color: #A7672A;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.product-button:hover {
+  background-color: #8a5524;
+  border-color: #8a5524;
+  transform: translateY(-2px);
+}

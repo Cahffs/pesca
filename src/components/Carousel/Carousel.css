@@ -1,0 +1,252 @@
+.custom-carousel {
+  background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+  position: relative;
+}
+
+.carousel-spacer {
+  height: 30px;
+  background: white;
+}
+
+.carousel-container {
+  position: relative;
+  height: 350px; /* Reduzido de 400px */
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1400px;
+  border-radius: 12px;
+  box-shadow: 
+    0 8px 25px rgba(0,0,0,0.15),
+    0 0 0 1px rgba(83, 99, 47, 0.1); /* Borda sutil */
+}
+
+.carousel-slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  border-radius: 12px;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.slide-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 12px;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(83, 99, 47, 0.9) 0%,
+    rgba(83, 99, 47, 0.7) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.slide-content {
+  text-align: center;
+  color: white;
+  max-width: 700px;
+  padding: 0 30px;
+}
+
+.slide-title {
+  font-size: 2.2rem; /* Reduzido */
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.slide-subtitle {
+  font-size: 1.3rem; /* Reduzido */
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.slide-button {
+  padding: 10px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(167, 103, 42, 0.3);
+}
+
+.slide-button:hover {
+  background-color: #8a5524 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(167, 103, 42, 0.4);
+}
+
+/* Indicadores */
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background-color: #A7672A;
+  transform: scale(1.2);
+}
+
+.indicator:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+/* Controles de Navegação */
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: #A7672A;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.carousel-control:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.carousel-control.prev {
+  left: 15px;
+}
+
+.carousel-control.next {
+  right: 15px;
+}
+
+.control-icon {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Efeito de borda sutil no container */
+.carousel-container::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #A7672A, #53632F);
+  border-radius: 14px;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 280px;
+    border-radius: 8px;
+    margin: 0 10px;
+  }
+  
+  .slide-title {
+    font-size: 1.6rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .carousel-control {
+    width: 38px;
+    height: 38px;
+  }
+  
+  .control-icon {
+    font-size: 1.4rem;
+  }
+  
+  .carousel-spacer {
+    height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-container {
+    height: 220px;
+  }
+  
+  .slide-title {
+    font-size: 1.3rem;
+  }
+  
+  .slide-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .slide-button {
+    padding: 8px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .carousel-control {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .control-icon {
+    font-size: 1.2rem;
+  }
+}

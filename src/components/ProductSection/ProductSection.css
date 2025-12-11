@@ -1,0 +1,27 @@
+/* Estilos para a seção de produtos */
+.product-section {
+  position: relative;
+}
+
+.section-divider {
+  background-color: #A7672A;
+  height: 3px;
+  width: 80px;
+  margin: 0.5rem auto 2rem;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .section-divider {
+    margin: 0.5rem auto 1.5rem;
+  }
+  
+  .section-header {
+    text-align: center !important;
+  }
+  
+  .view-more-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
