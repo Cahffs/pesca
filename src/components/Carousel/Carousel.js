@@ -67,7 +67,7 @@ const Carousel = () => {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   const buttonStyle = {
     backgroundColor: '#A7672A',

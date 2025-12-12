@@ -1,0 +1,265 @@
+/* Camping.css - Mesmo padrão da página Pesca */
+
+.camping-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.camping-header {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filtro-sidebar {
+  background: white;
+  border-radius: 10px;
+  position: sticky;
+  top: 20px;
+}
+
+.menu-category-btn {
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+  color: #495057;
+}
+
+.menu-category-btn:hover {
+  background-color: rgba(45, 90, 39, 0.05); /* #2D5A27 com opacidade */
+  color: #2D5A27;
+}
+
+.menu-category-btn.active {
+  background-color: rgba(45, 90, 39, 0.1) !important; /* #2D5A27 com opacidade */
+  color: #2D5A27;
+  font-weight: bold;
+}
+
+.subcategory-menu {
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
+  max-height: 500px;
+  overflow: hidden;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+.subcategory-btn {
+  background: transparent;
+  border: none;
+  color: #6c757d;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  padding-left: 2.5rem !important; /* Indentação para alinhar com ícone da categoria pai */
+}
+
+.subcategory-btn:hover {
+  background-color: rgba(139, 69, 19, 0.05); /* #8B4513 com opacidade */
+  color: #8B4513;
+}
+
+.subcategory-btn.active {
+  background-color: rgba(139, 69, 19, 0.1) !important; /* #8B4513 com opacidade */
+  color: #8B4513;
+  font-weight: bold;
+}
+
+.subitems-menu {
+  background-color: rgba(0,0,0,0.02);
+}
+
+.subitem-btn {
+  background: transparent;
+  border: none;
+  color: #868e96;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  padding-left: 3rem !important; /* Mais indentação para subitens */
+}
+
+.subitem-btn:hover {
+  color: #8B4513;
+  background-color: rgba(139, 69, 19, 0.05);
+}
+
+/* Estilos para paginação */
+.pagination .page-link {
+  transition: all 0.2s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: rgba(45, 90, 39, 0.1); /* #2D5A27 com opacidade */
+  color: #2D5A27;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #2D5A27;
+  border-color: #2D5A27;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #f8f9fa;
+}
+
+/* Responsivo para paginação */
+@media (max-width: 576px) {
+  .pagination .page-link {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .filtro-sidebar {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+  
+  .camping-header {
+    text-align: center;
+  }
+  
+  .menu-category-btn,
+  .subcategory-btn,
+  .subitem-btn {
+    padding: 0.75rem 1rem !important;
+  }
+  
+  .subcategory-btn {
+    padding-left: 1.5rem !important;
+  }
+  
+  .subitem-btn {
+    padding-left: 2rem !important;
+  }
+}
+
+/* Estilos específicos para camping */
+.menu-category-btn .badge {
+  background-color: #8B4513;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+
+.menu-category-btn.active .badge {
+  background-color: white !important;
+  color: #2D5A27 !important;
+}
+
+/* Ajuste para botões na sidebar */
+.filtro-sidebar .btn {
+  transition: all 0.3s ease;
+}
+
+.filtro-sidebar .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.15);
+}
+
+/* Banner lateral */
+.card[style*="background-color: #f0f4e8"] {
+  border: 2px solid rgba(45, 90, 39, 0.1) !important;
+}
+
+/* Animações suaves */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.camping-page {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar personalizado para o menu */
+.subcategory-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.subcategory-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.subcategory-menu::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.subcategory-menu::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Efeito de hover nos produtos */
+.col-xl-4 .card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.col-xl-4 .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Ajuste para o select de ordenação */
+.form-select:focus {
+  border-color: #2D5A27;
+  box-shadow: 0 0 0 0.25rem rgba(45, 90, 39, 0.25);
+}
+
+/* Botão Limpar Filtros */
+.btn[style*="background-color: #2D5A27"]:hover {
+  background-color: #244520 !important;
+  transform: translateY(-1px);
+}
+
+/* Botão Ver Kits */
+.btn[style*="background-color: #8B4513"]:hover {
+  background-color: #753a10 !important;
+  transform: translateY(-1px);
+}
+
+/* Loading state (se necessário) */
+.loading-spinner {
+  color: #2D5A27;
+}
+
+/* Mensagem de nenhum produto encontrado */
+.text-center.py-5 i {
+  color: #2D5A27;
+  opacity: 0.7;
+}
+
+/* Badges nos produtos */
+.badge.bg-warning {
+  background-color: #8B4513 !important;
+}
+
+/* Preços */
+.text-decoration-line-through {
+  color: #6c757d !important;
+}
+
+/* Estrelas de avaliação */
+.bi-star-fill {
+  color: #FFD700;
+}

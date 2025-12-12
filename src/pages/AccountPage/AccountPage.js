@@ -18,7 +18,7 @@ const AccountPage = () => {
     }
   });
 
-  const [orders, setOrders] = useState([
+  const [orders] = useState([
     { id: 1001, date: '15/10/2023', total: 299.90, status: 'Entregue', items: 3 },
     { id: 1002, date: '05/11/2023', total: 459.50, status: 'Em Trânsito', items: 2 },
     { id: 1003, date: '20/11/2023', total: 189.90, status: 'Processando', items: 1 },

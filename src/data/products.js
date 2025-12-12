@@ -1,3 +1,5 @@
+// products.js - Padronizado com todos os produtos
+
 export const products = [
   // ========== VARAS PARA MOLINETE ==========
   {
@@ -20,7 +22,7 @@ export const products = [
     name: "Vara Daiwa Exceler 2.40m Molinete",
     price: 159.99,
     originalPrice: null,
-    image: "/images/vara-molinete-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "molinete",
@@ -35,7 +37,7 @@ export const products = [
     name: "Vara Okuma Celilo 1.80m Molinete",
     price: 119.99,
     originalPrice: null,
-    image: "/images/vara-molinete-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "molinete",
@@ -52,7 +54,7 @@ export const products = [
     name: "Vara Abu Garcia Vendetta 2.10m Carretilha",
     price: 249.99,
     originalPrice: null,
-    image: "/images/vara-carretilha-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "carretilha",
@@ -67,7 +69,7 @@ export const products = [
     name: "Vara Shimano SLX 2.30m Carretilha",
     price: 219.99,
     originalPrice: null,
-    image: "/images/vara-carretilha-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "carretilha",
@@ -82,7 +84,7 @@ export const products = [
     name: "Vara Daiwa Tatula 2.40m Carretilha",
     price: 279.99,
     originalPrice: null,
-    image: "/images/vara-carretilha-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "carretilha",
@@ -99,7 +101,7 @@ export const products = [
     name: "Vara Telescópica Shimano Catana 7 Seções",
     price: 129.99,
     originalPrice: null,
-    image: "/images/vara-telescopica-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "telescopica",
@@ -114,7 +116,7 @@ export const products = [
     name: "Vara Telescópica Daiwa Ninja 6 Seções",
     price: 149.99,
     originalPrice: null,
-    image: "/images/vara-telescopica-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "telescopica",
@@ -129,7 +131,7 @@ export const products = [
     name: "Vara Telescópica Okuma Voyager 5 Seções",
     price: 99.99,
     originalPrice: null,
-    image: "/images/vara-telescopica-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "telescopica",
@@ -146,7 +148,7 @@ export const products = [
     name: "Vara de Praia Penn Battalion 4m Surfcasting",
     price: 319.99,
     originalPrice: null,
-    image: "/images/vara-praia-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "praia",
@@ -161,7 +163,7 @@ export const products = [
     name: "Vara de Praia Shimano Speedmaster 3.90m",
     price: 289.99,
     originalPrice: null,
-    image: "/images/vara-praia-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "praia",
@@ -176,7 +178,7 @@ export const products = [
     name: "Vara de Praia Daiwa Emblem 4.20m",
     price: 349.99,
     originalPrice: null,
-    image: "/images/vara-praia-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "praia",
@@ -193,7 +195,7 @@ export const products = [
     name: "Vara Pesada Shimano Beastmaster 2.70m",
     price: 389.99,
     originalPrice: null,
-    image: "/images/vara-pesada-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "pesada",
@@ -208,7 +210,7 @@ export const products = [
     name: "Vara Pesada Penn International 2.40m",
     price: 459.99,
     originalPrice: null,
-    image: "/images/vara-pesada-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "pesada",
@@ -223,7 +225,7 @@ export const products = [
     name: "Vara Pesada Daiwa Saltiga 2.50m",
     price: 519.99,
     originalPrice: null,
-    image: "/images/vara-pesada-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "varas",
     specificCategory: "pesada",
@@ -240,7 +242,7 @@ export const products = [
     name: "Molinete Shimano Sedona FI 2500",
     price: 279.99,
     originalPrice: null,
-    image: "/images/molinetes-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "molinete",
@@ -255,7 +257,7 @@ export const products = [
     name: "Molinete Daiwa BG 5000",
     price: 349.99,
     originalPrice: null,
-    image: "/images/molinetes-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "molinete",
@@ -270,7 +272,7 @@ export const products = [
     name: "Molinete Penn Pursuit III 4000",
     price: 199.99,
     originalPrice: null,
-    image: "/images/molinetes-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "molinete",
@@ -287,7 +289,7 @@ export const products = [
     name: "Carretilha Shimano Curado 150",
     price: 299.99,
     originalPrice: null,
-    image: "/images/carretilha-speed.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "carretilha-baixo-perfil",
@@ -302,7 +304,7 @@ export const products = [
     name: "Carretilha Abu Garcia Revo SX",
     price: 329.99,
     originalPrice: null,
-    image: "/images/carretilha-baixo-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "carretilha-baixo-perfil",
@@ -317,7 +319,7 @@ export const products = [
     name: "Carretilha Daiwa Tatula CT",
     price: 279.99,
     originalPrice: 339.99,
-    image: "/images/carretilha-baixo-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "carretilhas-molinetes",
     specificCategory: "carretilha-baixo-perfil",
@@ -334,7 +336,7 @@ export const products = [
     name: "Linha Berkley Trilene XL 300m 12lb",
     price: 45.99,
     originalPrice: 59.99,
-    image: "/images/linha-300m.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "monofilamento",
@@ -349,7 +351,7 @@ export const products = [
     name: "Linha Sufix Elite 250m 10lb",
     price: 39.99,
     originalPrice: 49.99,
-    image: "/images/linha-mono-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "monofilamento",
@@ -364,7 +366,7 @@ export const products = [
     name: "Linha Spiderwire EZ Monofilamento 200m 15lb",
     price: 34.99,
     originalPrice: 44.99,
-    image: "/images/linha-mono-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "monofilamento",
@@ -381,7 +383,7 @@ export const products = [
     name: "Linha PowerPro Braid 150m 30lb",
     price: 89.99,
     originalPrice: null,
-    image: "/images/linha-braid-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "multifilamento",
@@ -396,7 +398,7 @@ export const products = [
     name: "Linha Daiwa J-Braid 200m 20lb",
     price: 79.99,
     originalPrice: null,
-    image: "/images/linha-braid-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "multifilamento",
@@ -411,7 +413,7 @@ export const products = [
     name: "Linha Sufix 832 Braid 135m 50lb",
     price: 99.99,
     originalPrice: null,
-    image: "/images/linha-braid-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "linhas",
     specificCategory: "multifilamento",
@@ -428,7 +430,7 @@ export const products = [
     name: "Kit Anzóis Variados 50 Unidades",
     price: 39.99,
     originalPrice: 49.99,
-    image: "/images/anzois-variados.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "anzóis",
@@ -443,7 +445,7 @@ export const products = [
     name: "Anzóis Owner Mosquito 10 Unidades",
     price: 24.99,
     originalPrice: null,
-    image: "/images/anzois-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "anzóis",
@@ -458,7 +460,7 @@ export const products = [
     name: "Anzóis Gamakatsu Octopus 25 Unidades",
     price: 49.99,
     originalPrice: null,
-    image: "/images/anzois-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "anzóis",
@@ -475,7 +477,7 @@ export const products = [
     name: "Jig Heads 10 Unidades Variadas",
     price: 18.99,
     originalPrice: null,
-    image: "/images/jig-heads-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "jig-heads",
@@ -490,7 +492,7 @@ export const products = [
     name: "Jig Heads Owner Cultiva 7g 5 Unidades",
     price: 22.99,
     originalPrice: null,
-    image: "/images/jig-heads-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "jig-heads",
@@ -505,7 +507,7 @@ export const products = [
     name: "Jig Heads Colored 15 Unidades",
     price: 29.99,
     originalPrice: 39.99,
-    image: "/images/jig-heads-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "ancas-terminais",
     specificCategory: "jig-heads",
@@ -522,7 +524,7 @@ export const products = [
     name: "Caixa de Pesca Plano 3600",
     price: 59.99,
     originalPrice: null,
-    image: "/images/caixa-pesca-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "caixas-estojos",
@@ -537,7 +539,7 @@ export const products = [
     name: "Caixa de Pesca Flambeau 5007",
     price: 79.99,
     originalPrice: null,
-    image: "/images/caixa-pesca-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "caixas-estojos",
@@ -552,7 +554,7 @@ export const products = [
     name: "Estojo de Pesca Portátil",
     price: 34.99,
     originalPrice: null,
-    image: "/images/caixa-pesca-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "caixas-estojos",
@@ -569,7 +571,7 @@ export const products = [
     name: "Alicate de Pesca Multifunção",
     price: 34.99,
     originalPrice: null,
-    image: "/images/alicate-pesca-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "alicates-ferramentas",
@@ -584,7 +586,7 @@ export const products = [
     name: "Alicate de Corte Premium",
     price: 49.99,
     originalPrice: null,
-    image: "/images/alicate-pesca-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "alicates-ferramentas",
@@ -599,7 +601,7 @@ export const products = [
     name: "Kit Alicates 3 em 1",
     price: 59.99,
     originalPrice: null,
-    image: "/images/alicate-pesca-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "alicates-ferramentas",
@@ -616,7 +618,7 @@ export const products = [
     name: "Suporte Triplo para Varas",
     price: 42.99,
     originalPrice: null,
-    image: "/images/suporte-vara-1.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "suportes-vara",
@@ -631,7 +633,7 @@ export const products = [
     name: "Suporte Quádruplo Profissional",
     price: 69.99,
     originalPrice: null,
-    image: "/images/suporte-vara-2.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "suportes-vara",
@@ -646,7 +648,7 @@ export const products = [
     name: "Suporte Simples para Barco",
     price: 29.99,
     originalPrice: null,
-    image: "/images/suporte-vara-3.webp",
+    image: "/images/vara-pesca.webp",
     category: "pesca",
     subcategory: "acessorios",
     specificCategory: "suportes-vara",
@@ -657,13 +659,13 @@ export const products = [
     features: ["Simples", "Barco", "Compacto", "Fácil instalação"]
   },
 
-  // ========== CAMPING (mantido como estava) ==========
+  // ========== CAMPING ==========
   {
     id: 43,
     name: "Barraca Camping 4 Pessoas",
     price: 459.99,
     originalPrice: null,
-    image: "/images/barraca-camping.webp",
+    image: "/images/fogareiro-portal.webp",
     category: "camping",
     subcategory: "barracas",
     specificCategory: "barraca-familiar",
@@ -678,7 +680,7 @@ export const products = [
     name: "Fogareiro Portátil Campingaz",
     price: 89.99,
     originalPrice: 119.99,
-    image: "/images/fogareiro-portatil.webp",
+    image: "/images/fogareiro-portal.webp",
     category: "camping",
     subcategory: "cozinha",
     specificCategory: "fogareiro",
@@ -689,195 +691,621 @@ export const products = [
     features: ["Compacto", "Fácil transporte", "Alta potência", "Regulável"]
   },
 
-// ========== PRODUTOS DE PESCA ESPORTIVA ==========
-{
-  id: 45,
-  name: "Vara de Bass Shimano Curado",
-  price: 389.99,
-  originalPrice: null,
-  image: "/images/pesca-esportiva-1.webp",
-  category: "pesca-esportiva",
-  subcategory: "varas",
-  specificCategory: "bass",
-  bestSeller: true,
-  rating: 4.9,
-  stock: 8,
-  description: "Vara especializada para pesca de bass, ação extra rápida.",
-  features: ["Ação extra rápida", "2,10m", "Bass", "Guides Fuji"]
-},
-{
-  id: 46,
-  name: "Carretilha para Bass Lew's Tournament",
-  price: 429.99,
-  originalPrice: null,
-  image: "/images/pesca-esportiva-2.webp",
-  category: "pesca-esportiva",
-  subcategory: "carretilhas",
-  specificCategory: "bass",
-  bestSeller: true,
-  rating: 4.8,
-  stock: 6,
-  description: "Carretilha profissional para competições de bass.",
-  features: ["Freio magnético", "7 rolamentos", "Bass", "Competição"]
-},
-{
-  id: 47,
-  name: "Iscas Soft para Bass 10 unidades",
-  price: 89.99,
-  originalPrice: null,
-  image: "/images/pesca-esportiva-3.webp",
-  category: "pesca-esportiva",
-  subcategory: "iscas",
-  specificCategory: "soft-bass",
-  bestSeller: false,
-  rating: 4.7,
-  stock: 25,
-  description: "Kit com 10 iscas soft especializadas para bass.",
-  features: ["10 unidades", "Soft plastic", "Bass", "Cores variadas"]
-},
-{
-  id: 48,
-  name: "Linha Fluorocarbon Bass 150m",
-  price: 79.99,
-  originalPrice: null,
-  image: "/images/pesca-esportiva-4.webp",
-  category: "pesca-esportiva",
-  subcategory: "linhas",
-  specificCategory: "fluorocarbon-bass",
-  bestSeller: true,
-  rating: 4.8,
-  stock: 30,
-  description: "Linha fluorocarbon especial para pesca de bass.",
-  features: ["Fluorocarbon", "150m", "8lb", "Invisível"]
-},
+  // ========== PRODUTOS DE PESCA ESPORTIVA ==========
+  {
+    id: 45,
+    name: "Vara de Bass Shimano Curado",
+    price: 389.99,
+    originalPrice: null,
+    image: "/images/vara-pesca.webp",
+    category: "pesca",
+    subcategory: "varas",
+    specificCategory: "carretilha",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 8,
+    description: "Vara especializada para pesca de bass, ação extra rápida.",
+    features: ["Ação extra rápida", "2,10m", "Bass", "Guides Fuji"]
+  },
+  {
+    id: 46,
+    name: "Carretilha para Bass Lew's Tournament",
+    price: 429.99,
+    originalPrice: null,
+    image: "/images/vara-pesca.webp",
+    category: "pesca",
+    subcategory: "carretilhas-molinetes",
+    specificCategory: "carretilha-baixo-perfil",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 6,
+    description: "Carretilha profissional para competições de bass.",
+    features: ["Freio magnético", "7 rolamentos", "Bass", "Competição"]
+  },
+  {
+    id: 47,
+    name: "Iscas Soft para Bass 10 unidades",
+    price: 89.99,
+    originalPrice: null,
+    image: "/images/vara-pesca.webp",
+    category: "pesca",
+    subcategory: "ancas-terminais",
+    specificCategory: "jig-heads",
+    bestSeller: false,
+    rating: 4.7,
+    stock: 25,
+    description: "Kit com 10 iscas soft especializadas para bass.",
+    features: ["10 unidades", "Soft plastic", "Bass", "Cores variadas"]
+  },
+  {
+    id: 48,
+    name: "Linha Fluorocarbon Bass 150m",
+    price: 79.99,
+    originalPrice: null,
+    image: "/images/vara-pesca.webp",
+    category: "pesca",
+    subcategory: "linhas",
+    specificCategory: "fluorocarbon",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 30,
+    description: "Linha fluorocarbon especial para pesca de bass.",
+    features: ["Fluorocarbon", "150m", "8lb", "Invisível"]
+  },
 
-// ========== KITS ESPECIAIS ==========
-{
-  id: 49,
-  name: "Kit Iniciante Pesca Completo",
-  price: 299.99,
-  originalPrice: 399.99,
-  image: "/images/kit-1.webp",
-  category: "kits",
-  subcategory: "iniciante",
-  specificCategory: "kit-completo",
-  bestSeller: true,
-  rating: 4.9,
-  stock: 15,
-  description: "Kit completo para quem está começando na pesca.",
-  features: ["Vara + Molinete", "Linha + Anzóis", "Caixa", "Alicate"]
-},
-{
-  id: 50,
-  name: "Kit Bass Pro",
-  price: 599.99,
-  originalPrice: null,
-  image: "/images/kit-2.webp",
-  category: "kits",
-  subcategory: "bass",
-  specificCategory: "kit-bass",
-  bestSeller: true,
-  rating: 4.8,
-  stock: 10,
-  description: "Kit profissional para pesca de bass.",
-  features: ["Vara baitcast", "Carretilha", "Iscas", "Caixa premium"]
-},
-{
-  id: 51,
-  name: "Kit Pesca de Praia",
-  price: 449.99,
-  originalPrice: null,
-  image: "/images/kit-3.webp",
-  category: "kits",
-  subcategory: "praia",
-  specificCategory: "kit-praia",
-  bestSeller: false,
-  rating: 4.7,
-  stock: 12,
-  description: "Kit completo para pesca de praia.",
-  features: ["Vara 4m", "Molinete 5000", "Linha", "Chumbadas"]
-},
-{
-  id: 52,
-  name: "Kit Camping Familiar",
-  price: 799.99,
-  originalPrice: 999.99,
-  image: "/images/kit-4.webp",
-  category: "kits",
-  subcategory: "camping",
-  specificCategory: "kit-familiar",
-  bestSeller: true,
-  rating: 4.8,
-  stock: 8,
-  description: "Kit completo para camping em família.",
-  features: ["Barraca 4 pessoas", "Fogareiro", "Lanterna", "Kit cozinha"]
-},
+  // ========== KITS ESPECIAIS ==========
+  {
+    id: 49,
+    name: "Kit Iniciante Pesca Completo",
+    price: 299.99,
+    originalPrice: 399.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "iniciante",
+    specificCategory: "kit-completo",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 15,
+    description: "Kit completo para quem está começando na pesca.",
+    features: ["Vara + Molinete", "Linha + Anzóis", "Caixa", "Alicate"]
+  },
+  {
+    id: 50,
+    name: "Kit Bass Pro",
+    price: 599.99,
+    originalPrice: null,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "bass",
+    specificCategory: "kit-bass",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 10,
+    description: "Kit profissional para pesca de bass.",
+    features: ["Vara baitcast", "Carretilha", "Iscas", "Caixa premium"]
+  },
+  {
+    id: 51,
+    name: "Kit Pesca de Praia",
+    price: 449.99,
+    originalPrice: null,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "praia",
+    specificCategory: "kit-praia",
+    bestSeller: false,
+    rating: 4.7,
+    stock: 12,
+    description: "Kit completo para pesca de praia.",
+    features: ["Vara 4m", "Molinete 5000", "Linha", "Chumbadas"]
+  },
+  {
+    id: 52,
+    name: "Kit Camping Familiar",
+    price: 799.99,
+    originalPrice: 999.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "camping",
+    specificCategory: "kit-familiar",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 8,
+    description: "Kit completo para camping em família.",
+    features: ["Barraca 4 pessoas", "Fogareiro", "Lanterna", "Kit cozinha"]
+  },
 
-// ========== VESTUÁRIO ==========
-{
-  id: 53,
-  name: "Camiseta Técnica Pesca UV Protection",
-  price: 89.99,
-  originalPrice: 119.99,
-  image: "/images/vestuario-1.webp",
-  category: "vestuario",
-  subcategory: "camisetas",
-  specificCategory: "tecnica",
-  bestSeller: true,
-  rating: 4.7,
-  stock: 40,
-  description: "Camiseta técnica com proteção UV para pesca.",
-  features: ["Proteção UV", "Tecido rápido secagem", "Pesca", "Confortável"]
-},
-{
-  id: 54,
-  name: "Calça Cargo Pesca Impermeável",
-  price: 149.99,
-  originalPrice: null,
-  image: "/images/vestuario-2.webp",
-  category: "vestuario",
-  subcategory: "calcas",
-  specificCategory: "impermeavel",
-  bestSeller: false,
-  rating: 4.6,
-  stock: 25,
-  description: "Calça cargo impermeável para pesca e camping.",
-  features: ["Impermeável", "Múltiplos bolsos", "Resistente", "Confortável"]
-},
-{
-  id: 55,
-  name: "Boné Pesca Aba Curva",
-  price: 49.99,
-  originalPrice: 69.99,
-  image: "/images/vestuario-3.webp",
-  category: "vestuario",
-  subcategory: "acessorios",
-  specificCategory: "bone",
-  bestSeller: true,
-  rating: 4.8,
-  stock: 60,
-  description: "Boné especializado para pesca com aba curva.",
-  features: ["Proteção solar", "Aba curva", "Ajustável", "Leve"]
-},
-{
-  id: 56,
-  name: "Jaqueta Corta Vento Pesca",
-  price: 199.99,
-  originalPrice: 259.99,
-  image: "/images/vestuario-4.webp",
-  category: "vestuario",
-  subcategory: "jaquetas",
-  specificCategory: "corta-vento",
-  bestSeller: true,
-  rating: 4.9,
-  stock: 20,
-  description: "Jaqueta corta vento para pesca em condições adversas.",
-  features: ["Corta vento", "Impermeável", "Bolso iscas", "Capuz"]
-}
+  // ========== VESTUÁRIO ==========
+  {
+    id: 53,
+    name: "Camiseta Técnica Pesca UV Protection",
+    price: 89.99,
+    originalPrice: 119.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "camisetas",
+    specificCategory: "tecnica",
+    bestSeller: true,
+    rating: 4.7,
+    stock: 40,
+    description: "Camiseta técnica com proteção UV para pesca.",
+    features: ["Proteção UV", "Tecido rápido secagem", "Pesca", "Confortável"]
+  },
+  {
+    id: 54,
+    name: "Calça Cargo Pesca Impermeável",
+    price: 149.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "calcas",
+    specificCategory: "impermeavel",
+    bestSeller: false,
+    rating: 4.6,
+    stock: 25,
+    description: "Calça cargo impermeável para pesca e camping.",
+    features: ["Impermeável", "Múltiplos bolsos", "Resistente", "Confortável"]
+  },
+  {
+    id: 55,
+    name: "Boné Pesca Aba Curva",
+    price: 49.99,
+    originalPrice: 69.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "acessorios",
+    specificCategory: "bone",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 60,
+    description: "Boné especializado para pesca com aba curva.",
+    features: ["Proteção solar", "Aba curva", "Ajustável", "Leve"]
+  },
+  {
+    id: 56,
+    name: "Jaqueta Corta Vento Pesca",
+    price: 199.99,
+    originalPrice: 259.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "jaquetas",
+    specificCategory: "corta-vento",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 20,
+    description: "Jaqueta corta vento para pesca em condições adversas.",
+    features: ["Corta vento", "Impermeável", "Bolso iscas", "Capuz"]
+  },
+  {
+    id: 60,
+    name: "Barraca Quechua 2 Pessoas Fresh & Black",
+    price: 449.99,
+    originalPrice: 549.99,
+    image: "/images/fogareiro-portal.webp",
+    category: "camping",
+    subcategory: "abrigo-conforto",
+    specificCategory: "barracas-2p",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 15,
+    description: "Barraca 2 pessoas com tecnologia Fresh & Black...",
+    features: ["2 pessoas", "Fresh & Black", "Escurece 99%", "3kg"]
+  },
+  {
+    id: 71,
+    name: "Fogareiro Jetboil Flash Cooking System",
+    price: 199.99,
+    originalPrice: 249.99,
+    image: "/images/fogareiro-portal.webp",
+    category: "camping",
+    subcategory: "cozinha-hidratacao",
+    specificCategory: "fogareiro",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 15,
+    description: "Sistema de cozimento Jetboil...",
+    features: ["100s fervura", "Sistema integrado", "Eficiente", "Compacto"]
+  },
+  {
+    id: 74,
+    name: "Lanterna de Cabeça Petzl Actik Core",
+    price: 129.99,
+    originalPrice: null,
+    image: "/images/fogareiro-portal.webp",
+    category: "camping",
+    subcategory: "iluminacao-ferramentas",
+    specificCategory: "lanternas",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 25,
+    description: "Lanterna de cabeça 450 lumens...",
+    features: ["450 lumens", "Recarregável", "À prova d'água", "Confortável"]
+  },
+
+  // ========== VESTUÁRIO - CAMISAS UV ==========
+  {
+    id: 70,
+    name: "Camiseta UV Protection Columbia PFG",
+    price: 129.99,
+    originalPrice: 159.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "camisas-protecao-uv",
+    specificCategory: "tecnica",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 25,
+    description: "Camiseta técnica com proteção UV 50+, tecido rápido secagem.",
+    features: ["UPF 50+", "Secagem rápida", "Leve", "Ventilação"]
+  },
+  {
+    id: 71,
+    name: "Camiseta Mangas Longas UV Shimano",
+    price: 149.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "camisas-protecao-uv",
+    specificCategory: "tecnica",
+    bestSeller: true,
+    rating: 4.7,
+    stock: 20,
+    description: "Camiseta mangas longas com proteção solar total.",
+    features: ["Mangas longas", "Proteção total", "Confortável", "Tecido técnico"]
+  },
+
+  // ========== VESTUÁRIO - BONÉS ==========
+  {
+    id: 72,
+    name: "Boné Aba Curva UV Protection",
+    price: 49.99,
+    originalPrice: 69.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "bones-chapeus",
+    specificCategory: "bone",
+    bestSeller: true,
+    rating: 4.6,
+    stock: 40,
+    description: "Boné com aba curva e proteção UV, ajustável.",
+    features: ["Proteção UV", "Aba curva", "Ajustável", "Leve"]
+  },
+  {
+    id: 73,
+    name: "Chapéu de Pesca Aba Larga",
+    price: 79.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "bones-chapeus",
+    specificCategory: "bone",
+    bestSeller: false,
+    rating: 4.5,
+    stock: 30,
+    description: "Chapéu com aba larga para proteção total do rosto.",
+    features: ["Aba larga", "Proteção total", "Cordão", "Resistente à água"]
+  },
+
+  // ========== VESTUÁRIO - ÓCULOS POLARIZADOS ==========
+  {
+    id: 74,
+    name: "Óculos Polarizado Costa Del Mar",
+    price: 299.99,
+    originalPrice: 349.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "oculos-polarizados",
+    specificCategory: "acessorios",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 15,
+    description: "Óculos polarizado premium, lentes 100% polarizadas.",
+    features: ["100% polarizado", "Proteção UV400", "Anti-reflexo", "Premium"]
+  },
+  {
+    id: 75,
+    name: "Óculos Polarizado Oakley Flak Jacket",
+    price: 249.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "oculos-polarizados",
+    specificCategory: "acessorios",
+    bestSeller: false,
+    rating: 4.7,
+    stock: 20,
+    description: "Óculos esportivo polarizado, design aerodinâmico.",
+    features: ["Polarizado", "Esportivo", "Conforto", "Durabilidade"]
+  },
+
+  // ========== VESTUÁRIO - COLETES SALVA-VIDAS ==========
+  {
+    id: 76,
+    name: "Colete Salva-vidas Infantil",
+    price: 89.99,
+    originalPrice: 119.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "coletes-salva-vidas",
+    specificCategory: "acessorios",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 25,
+    description: "Colete salva-vidas infantil, certificação INMETRO.",
+    features: ["Certificado", "Ajustável", "Cores vivas", "Infantil"]
+  },
+  {
+    id: 77,
+    name: "Colete Salva-vidas Adulto Premium",
+    price: 159.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "coletes-salva-vidas",
+    specificCategory: "acessorios",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 18,
+    description: "Colete salva-vidas adulto premium, máxima flutuação.",
+    features: ["Premium", "Alta flutuação", "Confortável", "Segurança"]
+  },
+
+  // ========== VESTUÁRIO - CALÇADOS ==========
+  {
+    id: 78,
+    name: "Sapatilha de Pesca Columbia Drainmaker",
+    price: 199.99,
+    originalPrice: 249.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "calcados-protecao",
+    specificCategory: "acessorios",
+    bestSeller: true,
+    rating: 4.7,
+    stock: 22,
+    description: "Sapatilha especial para pesca, drenagem rápida.",
+    features: ["Drenagem rápida", "Antiderrapante", "Confortável", "Leve"]
+  },
+  {
+    id: 79,
+    name: "Bota de Pesca Impermeável",
+    price: 179.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "calcados-protecao",
+    specificCategory: "acessorios",
+    bestSeller: false,
+    rating: 4.6,
+    stock: 20,
+    description: "Bota impermeável para pesca, solado antiderrapante.",
+    features: ["Impermeável", "Antiderrapante", "Conforto", "Durabilidade"]
+  },
+
+  // ========== VESTUÁRIO - LUVAS ==========
+  {
+    id: 80,
+    name: "Luva de Proteção UV Fingerless",
+    price: 39.99,
+    originalPrice: 49.99,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "luvas-protecao",
+    specificCategory: "acessorios",
+    bestSeller: true,
+    rating: 4.5,
+    stock: 35,
+    description: "Luva sem dedos com proteção UV, ideal para pesca.",
+    features: ["Proteção UV", "Sem dedos", "Confortável", "Leve"]
+  },
+  {
+    id: 81,
+    name: "Luva de Corte para Pesca",
+    price: 59.99,
+    originalPrice: null,
+    image: "/images/camisa-tecnica.webp",
+    category: "vestuario",
+    subcategory: "luvas-protecao",
+    specificCategory: "acessorios",
+    bestSeller: false,
+    rating: 4.7,
+    stock: 28,
+    description: "Luva anti-corte para manipulação de anzóis e linhas.",
+    features: ["Anti-corte", "Proteção", "Conforto", "Durabilidade"]
+  },
+  {
+    id: 90,
+    name: "Kit Iniciante Pesca Completo Shimano",
+    price: 299.99,
+    originalPrice: 399.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-iniciante",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 15,
+    description: "Kit completo para quem está começando na pesca. Inclui vara, molinete, linha, anzóis e caixa organizadora.",
+    features: ["Vara 2,10m", "Molinete 2500", "Linha 150m", "Kit anzóis", "Caixa organizadora"]
+  },
+  {
+    id: 91,
+    name: "Kit Pesca de Praia Premium",
+    price: 449.99,
+    originalPrice: 599.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-praia",
+    bestSeller: true,
+    rating: 4.7,
+    stock: 12,
+    description: "Kit completo para pesca de praia. Vara 4m, molinete 5000, linha multifilamento e chumbadas.",
+    features: ["Vara 4m", "Molinete 5000", "Linha multifilamento", "Chumbadas variadas", "Porta-varas"]
+  },
+  {
+    id: 92,
+    name: "Kit Tucunaré Pro",
+    price: 699.99,
+    originalPrice: 899.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-tucunare",
+    bestSeller: true,
+    rating: 4.8,
+    stock: 8,
+    description: "Kit profissional para pesca de tucunaré. Vara média-ação, carretilha, iscas artificiais específicas.",
+    features: ["Vara baitcast", "Carretilha", "Iscas artificiais", "Caixa premium", "Alicate"]
+  },
+  {
+    id: 93,
+    name: "Kit Pesca Embarcada Mar",
+    price: 799.99,
+    originalPrice: 999.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-iniciante",
+    bestSeller: false,
+    rating: 4.6,
+    stock: 6,
+    description: "Kit para pesca embarcada em mar. Vara pesada, molinete robusto, linha braid 50lb.",
+    features: ["Vara pesada 2,7m", "Molinete 8000", "Linha braid 50lb", "Anzóis marítimos", "Giradores"]
+  },
+  {
+    id: 94,
+    name: "Kit Bass Competição",
+    price: 599.99,
+    originalPrice: 799.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-tucunare",
+    bestSeller: true,
+    rating: 4.9,
+    stock: 10,
+    description: "Kit para competições de bass. Equipamentos de alta performance.",
+    features: ["Vara extra rápida", "Carretilha premium", "Iscas soft", "Fluorocarbon", "Caixa Plano"]
+  },
+  {
+    id: 95,
+    name: "Kit Camping + Pesca Familiar",
+    price: 899.99,
+    originalPrice: 1199.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "kits-prontos",
+    specificCategory: "kit-iniciante",
+    bestSeller: false,
+    rating: 4.7,
+    stock: 5,
+    description: "Combo perfeito para acampamento com pesca. Barraca 4 pessoas + equipamentos básicos de pesca.",
+    features: ["Barraca 4 pessoas", "Vara telescópica", "Molinete", "Kit pesca básico", "Lanterna"]
+  },
+
+  // ========== OUTLET / PROMOÇÕES ==========
+  {
+    id: 96,
+    name: "Vara Shimano Exage (Outlet) - Pequenos Defeitos",
+    price: 149.99,
+    originalPrice: 289.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: true,
+    rating: 4.5,
+    stock: 3,
+    description: "Vara Shimano Exage com pequenos defeitos cosméticos. Funcionalidade 100%.",
+    features: ["Pequenos defeitos", "Funcional 100%", "Garantia 30 dias", "Oportunidade"]
+  },
+  {
+    id: 97,
+    name: "Carretilha Abu Garcia Revo SX (Display)",
+    price: 249.99,
+    originalPrice: 429.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: true,
+    rating: 4.6,
+    stock: 2,
+    description: "Carretilha de display. Caixa original danificada, produto perfeito.",
+    features: ["Produto display", "Caixa danificada", "Funcional novo", "Super desconto"]
+  },
+  {
+    id: 98,
+    name: "Molinete Daiwa BG 4000 (Ponta de Estoque)",
+    price: 279.99,
+    originalPrice: 379.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: false,
+    rating: 4.7,
+    stock: 4,
+    description: "Ponta de estoque modelo antigo. Produto novo com embalagem original.",
+    features: ["Ponta de estoque", "Modelo antigo", "Novo lacrado", "Economia"]
+  },
+  {
+    id: 99,
+    name: "Kit Iscas Variadas (Pacote Econômico)",
+    price: 39.99,
+    originalPrice: 79.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: true,
+    rating: 4.4,
+    stock: 25,
+    description: "Pacote com iscas variadas, algumas com embalagem amassada. Produtos perfeitos.",
+    features: ["Embalagem danificada", "Iscas perfeitas", "Variedade", "50% desconto"]
+  },
+  {
+    id: 100,
+    name: "Caixa Plano 3600 (Segunda Linha)",
+    price: 34.99,
+    originalPrice: 69.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: false,
+    rating: 4.3,
+    stock: 8,
+    description: "Produto de segunda linha, pequenas imperfeições na pintura. Funcionalidade garantida.",
+    features: ["Segunda linha", "Imperfeições cosméticas", "Funciona perfeitamente", "Ótimo custo"]
+  },
+  {
+    id: 101,
+    name: "Vara Telescópica (Kit com 2 Unidades)",
+    price: 129.99,
+    originalPrice: 199.99,
+    image: "/images/anzois-variados.webp",
+    category: "kits",
+    subcategory: "outlet-promocoes",
+    specificCategory: null,
+    bestSeller: true,
+    rating: 4.5,
+    stock: 6,
+    description: "Kit com 2 varas telescópicas. Produtos de entrada, ideal para iniciantes.",
+    features: ["Kit 2 unidades", "Para iniciantes", "Econômico", "Boa qualidade"]
+  },
+
+  // ADICIONE AQUI TODOS OS OUTROS PRODUTOS QUE ESTAVAM NO SEU ARQUIVO ORIGINAL
+  // Mantenha a mesma estrutura, apenas ajustando as imagens conforme abaixo:
+  
+  // Para produtos de PESCA: image: "/images/vara-pesca.webp"
+  // Para produtos de CAMPING: image: "/images/fogareiro-portal.webp"
+  // Para produtos de KITS: image: "/images/anzois-variados.webp"
+  // Para produtos de VESTUÁRIO: image: "/images/camisa-tecnica.webp"
 ];
 
-
-// Categorias principais
+// Categorias principais - ESTRUTURA QUE OS COMPONENTES JS PRECISAM
 export const categories = {
   pesca: {
     name: "Pesca",
@@ -961,6 +1389,145 @@ export const categories = {
           utensilios: "Utensílios",
           conservacao: "Conservação de Alimentos"
         }
+      },
+      "abrigo-conforto": {
+        name: "Abrigo e Conforto",
+        specific: {
+          "barracas-2p": "Barracas 2 Pessoas",
+          "barracas-4p": "Barracas 4 Pessoas",
+          "barracas-6p": "Barracas 6+ Pessoas",
+          "gazebos-tendas": "Gazebos e Tendas",
+          "sacos-dormir": "Sacos de Dormir",
+          "colchoes-inflaveis": "Colchões Infláveis"
+        }
+      },
+      "cozinha-hidratacao": {
+        name: "Cozinha e Hidratação",
+        specific: {
+          "caixas-termicas": "Caixas Térmicas e Coolers",
+          "garrafas-termicas": "Garrafas Térmicas e Copos",
+          fogareiro: "Fogareiros",
+          "kits-cozinha": "Kits de Cozinha"
+        }
+      },
+      "iluminacao-ferramentas": {
+        name: "Iluminação e Ferramentas",
+        specific: {
+          "lanternas-cabeca": "Lanternas de Cabeça",
+          lampioes: "Lampiões",
+          "canivetes-multiuso": "Canivetes Multiuso"
+        }
+      }
+    }
+  },
+  kits: {
+    name: "Coleções Especiais",
+    subcategories: {
+      "kits-prontos": {
+        name: "Kits Prontos",
+        specific: {
+          "kit-iniciante": "Kit Iniciante",
+          "kit-praia": "Kit Pesca de Praia",
+          "kit-tucunare": "Kit Tucunaré",
+          "kit-bass": "Kit Bass",
+          "kit-completo": "Kit Completo",
+          "kit-familiar": "Kit Familiar"
+        }
+      },
+      "outlet-promocoes": {
+        name: "Outlet / Promoções",
+        specific: {}
+      },
+      iniciante: {
+        name: "Kits Iniciante",
+        specific: {
+          "kit-completo": "Kit Completo Iniciante"
+        }
+      },
+      bass: {
+        name: "Kits Bass",
+        specific: {
+          "kit-bass": "Kit Bass Pro"
+        }
+      },
+      praia: {
+        name: "Kits Praia",
+        specific: {
+          "kit-praia": "Kit Pesca de Praia"
+        }
+      },
+      camping: {
+        name: "Kits Camping",
+        specific: {
+          "kit-familiar": "Kit Camping Familiar"
+        }
+      }
+    }
+  },
+  vestuario: {
+    name: "Vestuário e Proteção",
+    subcategories: {
+      camisetas: {
+        name: "Camisetas",
+        specific: {
+          tecnica: "Camisetas Técnicas",
+          "impermeavel": "Impermeáveis",
+          "corta-vento": "Corta Vento"
+        }
+      },
+      calcas: {
+        name: "Calças",
+        specific: {
+          impermeavel: "Impermeáveis"
+        }
+      },
+      jaquetas: {
+        name: "Jaquetas",
+        specific: {
+          "corta-vento": "Corta Vento"
+        }
+      },
+      acessorios: {
+        name: "Acessórios",
+        specific: {
+          bone: "Bonés"
+        }
+      },
+      "camisas-protecao-uv": {
+        name: "Camisas de Proteção UV",
+        specific: {
+          tecnica: "Camisetas Técnicas"
+        }
+      },
+      "bones-chapeus": {
+        name: "Bonés e Chapéus",
+        specific: {
+          bone: "Bonés e Chapéus"
+        }
+      },
+      "oculos-polarizados": {
+        name: "Óculos Polarizados",
+        specific: {
+          acessorios: "Óculos"
+        }
+      },
+      "coletes-salva-vidas": {
+        name: "Coletes Salva-vidas",
+        specific: {
+          acessorios: "Coletes"
+        }
+      },
+      "calcados-protecao": {
+        name: "Calçados de Proteção",
+        specific: {
+          acessorios: "Calçados"
+        }
+      },
+      "luvas-protecao": {
+        name: "Luvas de Proteção",
+        specific: {
+          acessorios: "Luvas"
+        }
       }
     }
   }
@@ -985,6 +1552,8 @@ export const getProductsBySpecificCategory = (category, subcategory, specific) =
 export const bestSellers = products.filter(product => product.bestSeller);
 export const fishingProducts = getProductsByCategory('pesca');
 export const campingProducts = getProductsByCategory('camping');
+export const kitProducts = getProductsByCategory('kits');
+export const clothingProducts = getProductsByCategory('vestuario');
 
 // Função para contar produtos por subcategoria
 export const countProductsBySubcategory = (category, subcategory) => 
@@ -998,21 +1567,17 @@ export const countProductsBySpecific = (category, subcategory, specific) =>
     p.specificCategory === specific
   ).length;
 
-  // No final do arquivo products.js, adicione:
-
-// Função para obter produtos por categoria específica
+// Funções para os componentes JS
 export const sportFishingProducts = products.filter(product => 
   product.category === 'pesca' && (
     product.name.toLowerCase().includes('bass') ||
     product.name.toLowerCase().includes('competição') ||
     product.name.toLowerCase().includes('esportiv')
   )
-).slice(0, 4); // Limitar a 4 produtos
+).slice(0, 4);
 
-export const kitProducts = products.filter(product => 
-  product.name.toLowerCase().includes('kit')
-).slice(0, 4); // Limitar a 4 produtos
-
-export const clothingProducts = products.filter(product => 
-  product.category === 'vestuario'
-).slice(0, 4); // Limitar a 4 produtos
+export const getOutletProducts = () => 
+  products.filter(product => 
+    product.category === 'kits' && 
+    product.subcategory === 'outlet-promocoes'
+  );

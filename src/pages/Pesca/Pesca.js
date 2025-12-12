@@ -8,23 +8,45 @@ const Pesca = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState('todas');
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
+  const [selectedSpecific, setSelectedSpecific] = useState(null);
   const [expandedCategory, setExpandedCategory] = useState(null);
+  const [expandedSubcategory, setExpandedSubcategory] = useState(null);
   const [sortBy, setSortBy] = useState('relevancia');
   const [currentPage, setCurrentPage] = useState(1);
   const productsPerPage = 12;
 
-  // Estrutura hierárquica do menu - CORRIGIDA
+  // ESTRUTURA CORRETA baseada no seu banco de dados
   const menuStructure = [
     {
       id: 'varas',
       name: 'Varas de Pesca',
       icon: 'bi-bicycle',
       subcategories: [
-        { id: 'varas-molinete', name: 'Varas para Molinete' },
-        { id: 'varas-carretilha', name: 'Varas para Carretilha' },
-        { id: 'varas-telescopicas', name: 'Varas Telescópicas' },
-        { id: 'varas-praia', name: 'Varas de Praia' },
-        { id: 'varas-pesada', name: 'Varas para Pesca Pesada' }
+        { 
+          id: 'varas-molinete', 
+          name: 'Varas para Molinete',
+          specificCategory: 'molinete'
+        },
+        { 
+          id: 'varas-carretilha', 
+          name: 'Varas para Carretilha',
+          specificCategory: 'carretilha'
+        },
+        { 
+          id: 'varas-telescopica', 
+          name: 'Varas Telescópicas',
+          specificCategory: 'telescopica'
+        },
+        { 
+          id: 'varas-praia', 
+          name: 'Varas de Praia',
+          specificCategory: 'praia'
+        },
+        { 
+          id: 'varas-pesada', 
+          name: 'Varas para Pesca Pesada',
+          specificCategory: 'pesada'
+        }
       ]
     },
     {
@@ -32,10 +54,26 @@ const Pesca = () => {
       name: 'Carretilhas e Molinetes',
       icon: 'bi-gear-wide-connected',
       subcategories: [
-        { id: 'molinetes', name: 'Molinetes' },
-        { id: 'carretilhas-baixo', name: 'Carretilhas de Perfil Baixo' },
-        { id: 'carretilhas-alto', name: 'Carretilhas de Perfil Alto' },
-        { id: 'pecas-manutencao', name: 'Peças e Manutenção' }
+        { 
+          id: 'molinetes', 
+          name: 'Molinetes',
+          specificCategory: 'molinete'
+        },
+        { 
+          id: 'carretilhas-baixo', 
+          name: 'Carretilhas de Perfil Baixo',
+          specificCategory: 'carretilha-baixo-perfil'
+        },
+        { 
+          id: 'carretilhas-alto', 
+          name: 'Carretilhas de Perfil Alto',
+          specificCategory: 'carretilha-alto-perfil'
+        },
+        { 
+          id: 'pecas-manutencao', 
+          name: 'Peças e Manutenção',
+          specificCategory: 'pecas-manutencao'
+        }
       ]
     },
     {
@@ -43,9 +81,21 @@ const Pesca = () => {
       name: 'Linhas de Pesca',
       icon: 'bi-hurricane',
       subcategories: [
-        { id: 'monofilamento', name: 'Monofilamento' },
-        { id: 'multifilamento', name: 'Multifilamento' },
-        { id: 'fluorocarbon', name: 'Fluorocarbon' }
+        { 
+          id: 'monofilamento', 
+          name: 'Monofilamento',
+          specificCategory: 'monofilamento'
+        },
+        { 
+          id: 'multifilamento', 
+          name: 'Multifilamento',
+          specificCategory: 'multifilamento'
+        },
+        { 
+          id: 'fluorocarbon', 
+          name: 'Fluorocarbon',
+          specificCategory: 'fluorocarbon'
+        }
       ]
     },
     {
@@ -53,24 +103,21 @@ const Pesca = () => {
       name: 'Iscas',
       icon: 'bi-fish',
       subcategories: [
-        {
-          id: 'iscas-artificiais',
+        { 
+          id: 'iscas-artificiais', 
           name: 'Iscas Artificiais',
           subitems: [
-            'Superfície e Zara',
-            'Meia-água',
-            'Fundo e Jigs',
-            'Soft',
-            'Sapo/Frog'
+            { id: 'isca-artificial-superficie', name: 'Superfície e Zara' },
+            { id: 'isca-artificial-meia-agua', name: 'Meia-água' },
+            { id: 'isca-artificial-fundo', name: 'Fundo e Jigs' },
+            { id: 'isca-soft', name: 'Soft' },
+            { id: 'isca-natural', name: 'Iscas Naturais' }
           ]
         },
-        {
-          id: 'iscas-naturais',
-          name: 'Iscas Naturais e Massas',
-          subitems: [
-            'Massas prontas',
-            'Essências e Atrativos'
-          ]
+        { 
+          id: 'massas', 
+          name: 'Massas Prontas',
+          specificCategory: 'massas'
         }
       ]
     },
@@ -79,12 +126,36 @@ const Pesca = () => {
       name: 'Anzóis e Terminais',
       icon: 'bi-shield-check',
       subcategories: [
-        { id: 'anzois', name: 'Anzóis' },
-        { id: 'garateias', name: 'Garateias' },
-        { id: 'jig-heads', name: 'Jig Heads' },
-        { id: 'chumbadas', name: 'Chumbadas e Pesos' },
-        { id: 'boias', name: 'Boias' },
-        { id: 'giradores', name: 'Giradores, Snaps e Argolas' }
+        { 
+          id: 'anzois', 
+          name: 'Anzóis',
+          specificCategory: 'anzóis'
+        },
+        { 
+          id: 'garateias', 
+          name: 'Garateias',
+          specificCategory: 'garateias'
+        },
+        { 
+          id: 'jig-heads', 
+          name: 'Jig Heads',
+          specificCategory: 'jig-heads'
+        },
+        { 
+          id: 'chumbadas', 
+          name: 'Chumbadas e Pesos',
+          specificCategory: 'chumbadas'
+        },
+        { 
+          id: 'boias', 
+          name: 'Boias',
+          specificCategory: 'boias'
+        },
+        { 
+          id: 'giradores', 
+          name: 'Giradores, Snaps e Argolas',
+          specificCategory: 'giradores'
+        }
       ]
     },
     {
@@ -92,11 +163,31 @@ const Pesca = () => {
       name: 'Acessórios de Apoio',
       icon: 'bi-tools',
       subcategories: [
-        { id: 'caixas', name: 'Caixas de Pesca e Estojos Organizadores' },
-        { id: 'alicates', name: 'Alicates de Contenção e de Corte' },
-        { id: 'facas', name: 'Facas e Canivetes' },
-        { id: 'pucas', name: 'Puçás e Samburás' },
-        { id: 'suportes', name: 'Suportes de Vara' }
+        { 
+          id: 'caixas', 
+          name: 'Caixas de Pesca e Estojos Organizadores',
+          specificCategory: 'caixas-estojos'
+        },
+        { 
+          id: 'alicates', 
+          name: 'Alicates de Contenção e de Corte',
+          specificCategory: 'alicates-ferramentas'
+        },
+        { 
+          id: 'facas', 
+          name: 'Facas e Canivetes',
+          specificCategory: 'facas-canivetes'
+        },
+        { 
+          id: 'pucas', 
+          name: 'Puçás e Samburás',
+          specificCategory: 'pucas'
+        },
+        { 
+          id: 'suportes', 
+          name: 'Suportes de Vara',
+          specificCategory: 'suportes-vara'
+        }
       ]
     }
   ];
@@ -104,44 +195,92 @@ const Pesca = () => {
   // Filtrar produtos de pesca
   const fishingProducts = products.filter(p => p.category === 'pesca');
 
+  // Função para contar produtos
+  const countProducts = (subcategory, specific) => {
+    if (!subcategory && !specific) {
+      return fishingProducts.length;
+    }
+    
+    if (specific) {
+      // Para subitens de iscas artificiais
+      return fishingProducts.filter(p => p.specificCategory === specific).length;
+    }
+    
+    // Para subcategorias com specificCategory direta
+    const allSubcategories = menuStructure.flatMap(cat => cat.subcategories);
+    const subcatInfo = allSubcategories.find(s => s.id === subcategory);
+    
+    if (subcatInfo && subcatInfo.specificCategory) {
+      return fishingProducts.filter(p => p.specificCategory === subcatInfo.specificCategory).length;
+    }
+    
+    // Para subcategorias com subitems (iscas artificiais)
+    if (subcatInfo && subcatInfo.subitems) {
+      return subcatInfo.subitems.reduce((total, item) => {
+        return total + countProducts(null, item.id);
+      }, 0);
+    }
+    
+    return 0;
+  };
+
+  // Função para obter nome da seleção atual
+  const getCurrentSelectionName = () => {
+    if (selectedCategory === 'todas') return 'Todas as Categorias';
+    
+    const category = menuStructure.find(cat => cat.id === selectedCategory);
+    if (!category) return '';
+    
+    if (selectedSpecific) {
+      // Encontrar em subitems (iscas artificiais)
+      for (const subcat of category.subcategories) {
+        if (subcat.subitems) {
+          const item = subcat.subitems.find(i => i.id === selectedSpecific);
+          if (item) return item.name;
+        }
+        if (subcat.specificCategory === selectedSpecific) {
+          return subcat.name;
+        }
+      }
+      return '';
+    }
+    
+    if (selectedSubcategory) {
+      const subcat = category.subcategories.find(s => s.id === selectedSubcategory);
+      return subcat ? subcat.name : '';
+    }
+    
+    return category.name;
+  };
+
   // Filtrar produtos baseado nas seleções
   const filteredProducts = fishingProducts.filter(product => {
     if (selectedCategory === 'todas') {
       return true;
     }
     
-    if (selectedCategory && !selectedSubcategory) {
+    if (selectedCategory && !selectedSubcategory && !selectedSpecific) {
       return product.subcategory === selectedCategory;
     }
     
+    if (selectedSpecific) {
+      return product.specificCategory === selectedSpecific;
+    }
+    
     if (selectedSubcategory) {
-      const categoryMap = {
-        'varas-molinete': 'molinete',
-        'varas-carretilha': 'carretilha',
-        'varas-telescopicas': 'telescopica',
-        'varas-praia': 'praia',
-        'varas-pesada': 'pesada',
-        'molinetes': 'molinete',
-        'carretilhas-baixo': 'carretilha-baixo-perfil',
-        'carretilhas-alto': 'carretilha-alto-perfil',
-        'monofilamento': 'monofilamento',
-        'multifilamento': 'multifilamento',
-        'fluorocarbon': 'fluorocarbon',
-        'anzois': 'anzóis',
-        'garateias': 'garateias',
-        'jig-heads': 'jig-heads',
-        'chumbadas': 'chumbadas',
-        'boias': 'boias',
-        'giradores': 'giradores',
-        'caixas': 'caixas-estojos',
-        'alicates': 'alicates-ferramentas',
-        'facas': 'facas-canivetes',
-        'pucas': 'pucas',
-        'suportes': 'suportes-vara'
-      };
+      // Encontrar a specificCategory da subcategoria
+      const category = menuStructure.find(cat => cat.id === selectedCategory);
+      if (!category) return false;
       
-      const mappedCategory = categoryMap[selectedSubcategory];
-      return product.specificCategory === mappedCategory;
+      const subcat = category.subcategories.find(s => s.id === selectedSubcategory);
+      if (!subcat) return false;
+      
+      if (subcat.specificCategory) {
+        return product.specificCategory === subcat.specificCategory;
+      }
+      
+      // Para iscas artificiais, mostra todos os produtos da categoria iscas
+      return product.subcategory === selectedCategory;
     }
     
     return true;
@@ -171,24 +310,58 @@ const Pesca = () => {
   // Resetar para página 1 quando filtros mudam
   useEffect(() => {
     setCurrentPage(1);
-  }, [selectedCategory, selectedSubcategory, sortBy]);
+  }, [selectedCategory, selectedSubcategory, selectedSpecific, sortBy]);
 
   // Função para mudar página
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  // Função para expandir/recolher categoria
+  // Função para expandir categoria
   const toggleCategory = (categoryId) => {
     if (expandedCategory === categoryId) {
       setExpandedCategory(null);
+      setExpandedSubcategory(null);
     } else {
       setExpandedCategory(categoryId);
+      setExpandedSubcategory(null);
+      setSelectedCategory(categoryId);
+      setSelectedSubcategory(null);
+      setSelectedSpecific(null);
     }
   };
 
-  // Função para selecionar subcategoria
-  const handleSubcategorySelect = (categoryId, subcategoryId = null) => {
+  // Função para expandir subcategoria
+  const toggleSubcategory = (categoryId, subcategoryId) => {
+    if (expandedSubcategory === subcategoryId) {
+      setExpandedSubcategory(null);
+    } else {
+      setExpandedSubcategory(subcategoryId);
+      setSelectedSubcategory(subcategoryId);
+      setSelectedSpecific(null);
+    }
+  };
+
+  // Função para selecionar categoria principal
+  const handleCategorySelect = (categoryId) => {
+    setSelectedCategory(categoryId);
+    setSelectedSubcategory(null);
+    setSelectedSpecific(null);
+    setExpandedCategory(categoryId);
+    setExpandedSubcategory(null);
+  };
+
+  // Função para selecionar subcategoria específica
+  const handleSpecificSelect = (categoryId, subcategoryId, specificId = null) => {
     setSelectedCategory(categoryId);
     setSelectedSubcategory(subcategoryId);
+    setSelectedSpecific(specificId || subcategoryId);
+    // Se for uma specificCategory direta (não tem subitems)
+    const category = menuStructure.find(cat => cat.id === categoryId);
+    if (category) {
+      const subcat = category.subcategories.find(s => s.id === subcategoryId);
+      if (subcat && subcat.specificCategory && !subcat.subitems) {
+        setSelectedSpecific(subcat.specificCategory);
+      }
+    }
   };
 
   // Gerar números de página para paginação
@@ -197,28 +370,23 @@ const Pesca = () => {
     const maxVisiblePages = 5;
     
     if (totalPages <= maxVisiblePages) {
-      // Mostrar todas as páginas
       for (let i = 1; i <= totalPages; i++) {
         pageNumbers.push(i);
       }
     } else {
-      // Lógica para mostrar páginas com "..." no meio
       if (currentPage <= 3) {
-        // Primeiras páginas
         for (let i = 1; i <= 4; i++) {
           pageNumbers.push(i);
         }
         pageNumbers.push('...');
         pageNumbers.push(totalPages);
       } else if (currentPage >= totalPages - 2) {
-        // Últimas páginas
         pageNumbers.push(1);
         pageNumbers.push('...');
         for (let i = totalPages - 3; i <= totalPages; i++) {
           pageNumbers.push(i);
         }
       } else {
-        // Páginas do meio
         pageNumbers.push(1);
         pageNumbers.push('...');
         pageNumbers.push(currentPage - 1);
@@ -241,11 +409,7 @@ const Pesca = () => {
             <h1 className="fw-bold mb-1" style={{ color: '#53632F' }}>Equipamentos de Pesca</h1>
             <p className="text-muted mb-0">
               {sortedProducts.length} produtos encontrados
-              {selectedSubcategory && ` em ${menuStructure
-                .find(cat => cat.id === selectedCategory)
-                ?.subcategories?.find(sub => sub.id === selectedSubcategory)?.name}`}
-              {selectedCategory && !selectedSubcategory && ` em ${menuStructure
-                .find(cat => cat.id === selectedCategory)?.name}`}
+              {selectedCategory !== 'todas' && ` em ${getCurrentSelectionName()}`}
             </p>
           </div>
         </div>
@@ -263,7 +427,9 @@ const Pesca = () => {
                   onClick={() => {
                     setSelectedCategory('todas');
                     setSelectedSubcategory(null);
+                    setSelectedSpecific(null);
                     setExpandedCategory(null);
+                    setExpandedSubcategory(null);
                   }}
                 >
                   <i className="bi bi-grid-3x3-gap me-2"></i>
@@ -274,59 +440,95 @@ const Pesca = () => {
                 </button>
 
                 {/* Categorias do Menu */}
-                {menuStructure.map((category) => (
-                  <div key={category.id} className="border-bottom">
-                    {/* Botão da Categoria Principal */}
-                    <button
-                      className={`menu-category-btn w-100 text-start p-3 d-flex justify-content-between align-items-center ${selectedCategory === category.id ? 'active' : ''}`}
-                      onClick={() => {
-                        toggleCategory(category.id);
-                        handleSubcategorySelect(category.id);
-                      }}
-                    >
-                      <div>
-                        <i className={`bi ${category.icon} me-2`}></i>
-                        <span className="fw-bold">{category.name}</span>
-                      </div>
-                      <div>
-                        <i className={`bi ${expandedCategory === category.id ? 'bi-chevron-up' : 'bi-chevron-down'} small`}></i>
-                      </div>
-                    </button>
+                {menuStructure.map((category) => {
+                  const isCategoryExpanded = expandedCategory === category.id;
+                  const isCategorySelected = selectedCategory === category.id && !selectedSubcategory && !selectedSpecific;
+                  const categoryCount = fishingProducts.filter(p => p.subcategory === category.id).length;
+                  
+                  return (
+                    <div key={category.id} className="border-bottom">
+                      {/* Botão da Categoria Principal */}
+                      <button
+                        className={`menu-category-btn w-100 text-start p-3 d-flex justify-content-between align-items-center ${isCategorySelected ? 'active' : ''}`}
+                        onClick={() => toggleCategory(category.id)}
+                      >
+                        <div>
+                          <i className={`bi ${category.icon} me-2`}></i>
+                          <span className="fw-bold">{category.name}</span>
+                        </div>
+                        <div>
+                          <span className="badge rounded-pill me-2" style={{ backgroundColor: '#A7672A', fontSize: '0.7rem' }}>
+                            {categoryCount}
+                          </span>
+                          <i className={`bi ${isCategoryExpanded ? 'bi-chevron-up' : 'bi-chevron-down'} small`}></i>
+                        </div>
+                      </button>
 
-                    {/* Subcategorias (expansível) */}
-                    {expandedCategory === category.id && (
-                      <div className="subcategory-menu bg-light">
-                        {category.subcategories.map((subcategory) => (
-                          <div key={subcategory.id} className="border-top">
-                            {/* Subcategoria principal - SEM setinha */}
-                            <button
-                              className={`subcategory-btn w-100 text-start p-3 ${selectedSubcategory === subcategory.id ? 'active' : ''}`}
-                              onClick={() => handleSubcategorySelect(category.id, subcategory.id)}
-                            >
-                              <span>{subcategory.name}</span>
-                            </button>
-
-                            {/* Subitens (para iscas artificiais/naturais) */}
-                            {subcategory.subitems && (
-                              <div className="subitems-menu ps-4">
-                                {subcategory.subitems.map((item, index) => (
-                                  <div key={index} className="border-top">
-                                    <button
-                                      className="subitem-btn w-100 text-start p-2"
-                                      onClick={() => handleSubcategorySelect(category.id, subcategory.id)}
-                                    >
-                                      <small>{item}</small>
-                                    </button>
+                      {/* Subcategorias (expansível) */}
+                      {isCategoryExpanded && (
+                        <div className="subcategory-menu bg-light">
+                          {category.subcategories.map((subcategory) => {
+                            const isSubcategoryExpanded = expandedSubcategory === subcategory.id;
+                            const hasSubitems = subcategory.subitems && subcategory.subitems.length > 0;
+                            const subcategoryCount = countProducts(subcategory.id, null);
+                            
+                            if (subcategoryCount === 0) return null;
+                            
+                            return (
+                              <div key={subcategory.id} className="border-top">
+                                {/* Botão da Subcategoria */}
+                                <button
+                                  className={`subcategory-btn w-100 text-start p-3 d-flex justify-content-between align-items-center ${selectedSubcategory === subcategory.id && !selectedSpecific ? 'active' : ''}`}
+                                  onClick={() => hasSubitems ? toggleSubcategory(category.id, subcategory.id) : handleSpecificSelect(category.id, subcategory.id)}
+                                >
+                                  <span className="ps-3">{subcategory.name}</span>
+                                  <div>
+                                    {hasSubitems && (
+                                      <i className={`bi ${isSubcategoryExpanded ? 'bi-chevron-up' : 'bi-chevron-down'} me-2 small`}></i>
+                                    )}
+                                    <span className="badge rounded-pill" style={{ 
+                                      backgroundColor: '#A7672A',
+                                      fontSize: '0.7rem'
+                                    }}>
+                                      {subcategoryCount}
+                                    </span>
                                   </div>
-                                ))}
+                                </button>
+
+                                {/* Subitens (para iscas artificiais) */}
+                                {hasSubitems && isSubcategoryExpanded && (
+                                  <div className="subitems-menu">
+                                    {subcategory.subitems.map((item) => {
+                                      const itemCount = countProducts(null, item.id);
+                                      if (itemCount === 0) return null;
+                                      
+                                      return (
+                                        <div key={item.id} className="border-top">
+                                          <button
+                                            className={`subitem-btn w-100 text-start p-3 d-flex justify-content-between align-items-center ${selectedSpecific === item.id ? 'active' : ''}`}
+                                            onClick={() => handleSpecificSelect(category.id, subcategory.id, item.id)}
+                                          >
+                                            <span className="ps-5">{item.name}</span>
+                                            <span className="badge rounded-pill" style={{ 
+                                              backgroundColor: selectedSpecific === item.id ? '#53632F' : '#A7672A',
+                                              fontSize: '0.7rem'
+                                            }}>
+                                              {itemCount}
+                                            </span>
+                                          </button>
+                                        </div>
+                                      );
+                                    })}
+                                  </div>
+                                )}
                               </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
+                            );
+                          })}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
 
                 {/* Botão Limpar Filtros */}
                 <div className="p-3 border-top">
@@ -336,7 +538,9 @@ const Pesca = () => {
                     onClick={() => {
                       setSelectedCategory('todas');
                       setSelectedSubcategory(null);
+                      setSelectedSpecific(null);
                       setExpandedCategory(null);
+                      setExpandedSubcategory(null);
                     }}
                   >
                     <i className="bi bi-x-circle me-2"></i>
@@ -372,9 +576,9 @@ const Pesca = () => {
                   Mostrando {currentProducts.length} de {sortedProducts.length} produtos
                   {totalPages > 1 && ` (Página ${currentPage} de ${totalPages})`}
                 </span>
-                {selectedCategory && !selectedSubcategory && (
+                {selectedCategory !== 'todas' && (
                   <div className="small text-muted mt-1">
-                    Categoria: <strong>{menuStructure.find(cat => cat.id === selectedCategory)?.name}</strong>
+                    Filtro atual: <strong>{getCurrentSelectionName()}</strong>
                   </div>
                 )}
               </div>
@@ -477,8 +681,8 @@ const Pesca = () => {
                 <i className="bi bi-search fs-1 text-muted mb-3"></i>
                 <h5 className="fw-bold" style={{ color: '#53632F' }}>Nenhum produto encontrado</h5>
                 <p className="text-muted">
-                  {selectedCategory && !selectedSubcategory 
-                    ? `Não encontramos produtos na categoria "${menuStructure.find(cat => cat.id === selectedCategory)?.name}"`
+                  {selectedCategory !== 'todas'
+                    ? `Não encontramos produtos em "${getCurrentSelectionName()}"`
                     : 'Tente ajustar os filtros de busca'}
                 </p>
                 <button 
@@ -487,7 +691,9 @@ const Pesca = () => {
                   onClick={() => {
                     setSelectedCategory('todas');
                     setSelectedSubcategory(null);
+                    setSelectedSpecific(null);
                     setExpandedCategory(null);
+                    setExpandedSubcategory(null);
                   }}
                 >
                   Limpar Filtros

@@ -1,0 +1,103 @@
+/* Vestuario.css - MESMO PADRÃO EXATO da página Pesca */
+
+.vestuario-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.vestuario-header {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filtro-sidebar {
+  background: white;
+  border-radius: 10px;
+  position: sticky;
+  top: 20px;
+}
+
+.menu-category-btn {
+  background: transparent;
+  border: none;
+  transition: all 0.2s ease;
+  color: #495057;
+}
+
+.menu-category-btn:hover {
+  background-color: rgba(83, 99, 47, 0.05);
+  color: #53632F;
+}
+
+.menu-category-btn.active {
+  background-color: rgba(83, 99, 47, 0.1) !important;
+  color: #53632F;
+  font-weight: bold;
+}
+
+/* Estilos para paginação */
+.pagination .page-link {
+  transition: all 0.2s ease;
+}
+
+.pagination .page-link:hover {
+  background-color: rgba(83, 99, 47, 0.1);
+  color: #53632F;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #53632F;
+  border-color: #53632F;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #f8f9fa;
+}
+
+/* Responsivo para paginação */
+@media (max-width: 576px) {
+  .pagination .page-link {
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* Responsivo geral */
+@media (max-width: 768px) {
+  .filtro-sidebar {
+    position: static;
+    margin-bottom: 1.5rem;
+  }
+  
+  .vestuario-header {
+    text-align: center;
+  }
+  
+  .menu-category-btn {
+    padding: 0.75rem 1rem !important;
+  }
+}
+
+/* Estilos específicos que garantem o mesmo visual */
+.btn[style*="background-color: #53632F"]:hover {
+  background-color: #455328 !important;
+}
+
+.btn[style*="background-color: #A7672A"]:hover {
+  background-color: #8d5524 !important;
+}
+
+/* Removendo estilos não utilizados (sem subcategorias, sem badges) */
+.subcategory-menu,
+.subcategory-btn,
+.subitems-menu,
+.subitem-btn {
+  display: none;
+}
+
+/* Banner lateral */
+.card[style*="background-color: #f0f4e8"] {
+  border: 2px solid rgba(167, 103, 42, 0.1) !important;
+}

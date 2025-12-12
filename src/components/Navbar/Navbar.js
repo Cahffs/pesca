@@ -26,20 +26,24 @@ const Navbar = () => {
       {/* Primeira linha da Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark py-2" style={navbarStyle}>
         <div className="container-fluid">
-          {/* Logo - Esquerda */}
-          <div className="d-flex align-items-center" style={{ width: '25%' }}>
-            <a className="navbar-brand ms-3" href="/">
+          {/* Logo - Esquerda (AUMENTADO e mais pra direita) */}
+          <div className="d-flex align-items-center" style={{ width: '32%' }}> {/* Aumentei para 32% */}
+            <a className="navbar-brand ms-5" href="/" style={{ marginLeft: '25px' }}> {/* Aumentei margem */}
               <img 
                 src="/images/logo-navbar.jpg" 
                 alt="Cuesta Pesca e Camping" 
                 className="img-fluid"
-                style={{ maxHeight: '60px', width: 'auto' }}
+                style={{ 
+                  maxHeight: '85px', // AUMENTEI para 85px
+                  width: 'auto',
+                  minHeight: '70px'
+                }}
               />
             </a>
           </div>
 
-          {/* Search Bar - Centro */}
-          <div className="d-flex justify-content-center" style={{ width: '50%' }}>
+          {/* Search Bar - Centro (um pouco menor) */}
+          <div className="d-flex justify-content-center" style={{ width: '43%' }}> {/* Reduzi para 43% */}
             <div className="input-group" style={{ maxWidth: '500px' }}>
               <input 
                 type="text" 
@@ -56,7 +60,7 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Conta e Carrinho - Direita */}
+          {/* Conta e Carrinho - Direita (um pouco menor) */}
           <div className="d-flex justify-content-end" style={{ width: '25%' }}>
             {/* Botão direto para Minha Conta */}
             <button 
@@ -89,7 +93,7 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Segunda linha - Categorias */}
+      {/* Segunda linha - Categorias (INALTERADO) */}
       <nav className="navbar navbar-expand py-1" style={categoriesStyle}>
         <div className="container-fluid justify-content-center">
           <div className="navbar-nav d-flex flex-row gap-4">

@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { products } from '../../data/products';
 import { formatPrice, formatDiscountPercentage } from '../../utils/formatters';
-import { useCart } from '../../context/CartContext'; // Importar o hook
+import { useCart } from '../../context/CartContext';
 
 const Product = () => {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { addToCart, isInCart } = useCart(); // Usar o hook
+  const { addToCart, isInCart } = useCart();
   const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
@@ -16,7 +16,6 @@ const Product = () => {
   useEffect(() => {
     const foundProduct = products.find(p => p.id === parseInt(id));
     if (foundProduct) {
-      // Simular imagens adicionais
       setProduct({
         ...foundProduct,
         additionalImages: [
@@ -28,6 +27,70 @@ const Product = () => {
       });
     }
   }, [id]);
+
+  // Função para formatar o nome da categoria
+  const getCategoryName = (category) => {
+    switch(category) {
+      case 'pesca':
+        return 'Pesca';
+      case 'camping':
+        return 'Camping';
+      case 'kits':
+        return 'Coleções Especiais';
+      case 'vestuario':
+        return 'Vestuário';
+      default:
+        return category;
+    }
+  };
+
+  // Função para formatar o nome da subcategoria
+  const getSubcategoryName = (product) => {
+    if (!product) return '';
+    
+    const { category, subcategory } = product;
+    
+    // Mapeamento das subcategorias principais
+    const subcategoryMap = {
+      pesca: {
+        'varas': 'Varas de Pesca',
+        'carretilhas-molinetes': 'Carretilhas e Molinetes',
+        'linhas': 'Linhas de Pesca',
+        'iscas': 'Iscas',
+        'ancas-terminais': 'Anzóis e Terminais',
+        'acessorios': 'Acessórios'
+      },
+      camping: {
+        'barracas': 'Barracas',
+        'cozinha': 'Cozinha',
+        'abrigo-conforto': 'Abrigo e Conforto',
+        'cozinha-hidratacao': 'Cozinha e Hidratação',
+        'iluminacao-ferramentas': 'Iluminação e Ferramentas'
+      },
+      kits: {
+        'kits-prontos': 'Kits Prontos',
+        'outlet-promocoes': 'Outlet / Promoções',
+        'iniciante': 'Kits Iniciante',
+        'bass': 'Kits Bass',
+        'praia': 'Kits Praia',
+        'camping': 'Kits Camping'
+      },
+      vestuario: {
+        'camisetas': 'Camisetas',
+        'calcas': 'Calças',
+        'jaquetas': 'Jaquetas',
+        'acessorios': 'Acessórios',
+        'camisas-protecao-uv': 'Camisas Proteção UV',
+        'bones-chapeus': 'Bonés e Chapéus',
+        'oculos-polarizados': 'Óculos Polarizados',
+        'coletes-salva-vidas': 'Coletes Salva-vidas',
+        'calcados-protecao': 'Calçados de Proteção',
+        'luvas-protecao': 'Luvas de Proteção'
+      }
+    };
+    
+    return subcategoryMap[category]?.[subcategory] || subcategory || '';
+  };
 
   const handleQuantityChange = (change) => {
     const newQuantity = quantity + change;
@@ -42,7 +105,6 @@ const Product = () => {
     setIsAddingToCart(true);
     addToCart(product, quantity);
     
-    // Feedback visual
     setTimeout(() => {
       setIsAddingToCart(false);
     }, 1000);
@@ -82,7 +144,7 @@ const Product = () => {
   return (
     <div className="py-5" style={{ backgroundColor: '#f8f9fa' }}>
       <div className="container">
-        {/* Breadcrumb */}
+        {/* Breadcrumb atualizado */}
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item">
@@ -92,10 +154,31 @@ const Product = () => {
               </a>
             </li>
             <li className="breadcrumb-item">
-              <a href="#" style={{ color: '#53632F', textDecoration: 'none' }}>
-                {product.category === 'pesca' ? 'Pesca' : 'Camping'}
+              <a 
+                href="#" 
+                style={{ color: '#53632F', textDecoration: 'none' }}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(`/products?category=${product.category}`);
+                }}
+              >
+                {getCategoryName(product.category)}
               </a>
             </li>
+            {getSubcategoryName(product) && (
+              <li className="breadcrumb-item">
+                <a 
+                  href="#"
+                  style={{ color: '#53632F', textDecoration: 'none' }}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate(`/products?category=${product.category}&subcategory=${product.subcategory}`);
+                  }}
+                >
+                  {getSubcategoryName(product)}
+                </a>
+              </li>
+            )}
             <li className="breadcrumb-item active" aria-current="page">
               {product.name}
             </li>
@@ -106,7 +189,6 @@ const Product = () => {
           {/* Coluna de Imagens */}
           <div className="col-lg-6">
             <div className="row">
-              {/* Imagem Principal */}
               <div className="col-12 mb-4">
                 <div 
                   className="border rounded-3 overflow-hidden"
@@ -120,7 +202,6 @@ const Product = () => {
                 </div>
               </div>
               
-              {/* Miniaturas */}
               <div className="col-12">
                 <div className="d-flex gap-2 justify-content-center">
                   {product.additionalImages?.map((img, index) => (
@@ -150,12 +231,17 @@ const Product = () => {
           {/* Coluna de Informações */}
           <div className="col-lg-6">
             <div className="ps-lg-4">
-              {/* Categoria e Nome */}
+              {/* Categoria e Nome - Atualizado */}
               <div className="mb-3">
                 <span className="badge rounded-pill mb-2" style={secondaryButtonStyle}>
-                  {product.category === 'pesca' ? 'Pesca' : 'Camping'}
+                  {getCategoryName(product.category)}
                 </span>
-                <h1 className="h2 fw-bold" style={{ color: '#53632F' }}>
+                {getSubcategoryName(product) && (
+                  <span className="badge rounded-pill mb-2 ms-2" style={{ backgroundColor: '#6c757d', color: 'white' }}>
+                    {getSubcategoryName(product)}
+                  </span>
+                )}
+                <h1 className="h2 fw-bold mt-2" style={{ color: '#53632F' }}>
                   {product.name}
                 </h1>
               </div>
@@ -209,7 +295,6 @@ const Product = () => {
               {/* Quantidade e Ações */}
               <div className="border-top pt-4">
                 <div className="row g-3 align-items-center">
-                  {/* Seletor de Quantidade */}
                   <div className="col-md-4">
                     <label className="form-label fw-bold" style={{ color: '#53632F' }}>
                       Quantidade:
@@ -241,7 +326,6 @@ const Product = () => {
                     </div>
                   </div>
 
-                  {/* Botões de Ação */}
                   <div className="col-md-8">
                     <div className="d-grid gap-2 d-md-flex">
                       <button
@@ -305,7 +389,7 @@ const Product = () => {
           </div>
         </div>
 
-        {/* Produtos Relacionados */}
+        {/* Produtos Relacionados - Atualizado */}
         <div className="row mt-5">
           <div className="col-12">
             <h3 className="fw-bold mb-4" style={{ color: '#53632F' }}>
@@ -334,7 +418,7 @@ const Product = () => {
                         </h6>
                         <div className="d-flex justify-content-between align-items-center">
                           <span className="text-danger fw-bold">
-                            R$ {relatedProduct.price.toFixed(2)}
+                            {formatPrice(relatedProduct.price)}
                           </span>
                           <button 
                             className="btn btn-sm text-white"
